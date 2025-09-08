@@ -1,0 +1,74 @@
+/*************** Reset *********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  font-family: helvetica neue, arial, sans-serif;
+  line-height: 1.5em;
+  text-align: justify;
+  hyphens: auto;
+  color: #c45311;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1em;
+  background-color: #fcf9ec;
+  padding: 1em;
+  margin: 1em;
+}
+.text {
+  grid-column: 1/13;
+}
+
+#overskrift {
+  font-size: 2.5rem;
+  margin-top: 0.4em;
+  margin-bottom: 0.3em;
+  text-align: center;
+}
+footer {
+  text-align: right;
+  font-style: italic;
+  color: #c453114f;
+  grid-column: 1/13;
+}
+
+img {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  grid-column: 1/13;
+}
+
+@media (width >=500px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100px auto 100px;
+    gap: 1em;
+  }
+  #overskrift {
+    font-size: 3.5rem;
+  }
+  .text {
+    grid-column: 1/6;
+    grid-row: 2/3;
+  }
+  img {
+    grid-column: 6/13;
+    grid-row: 2/3;
+    align-self: center;
+  }
+  footer {
+    grid-column: 11/13;
+    grid-row: 3;
+    align-self: end;
+  }
+}
